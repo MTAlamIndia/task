@@ -1,0 +1,10 @@
+.noPlan {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.noPlan img {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+}

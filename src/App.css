@@ -1,0 +1,146 @@
+:root {
+    --lightColor: #e8f0f0;
+    --white: #ffffff;
+    --black: #1d1c1c;
+    --primary: #68b9ce;
+    --secondary: #67e6bd;
+    --blue: #0082b6;
+    --red: #e03838;
+    --primaryFont: 'Raleway', sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: var(--lightColor);
+    font-family: var(--primaryFont);
+}
+
+* {
+    box-sizing: border-box;
+    user-select: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+:focus {
+    outline: 0;
+}
+
+.container {
+    max-width: 350px;
+    height: 100vh;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.containerBox {
+    width: 100%;
+    height: 100%;
+    max-height: 500px;
+    background-image: linear-gradient(to bottom, var(--white), var(--lightColor));
+    border-radius: 20px;
+    box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+}
+
+.containerBox>div {
+    padding: 15px;
+    padding-bottom: 80px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    position: relative;
+}
+
+.containerBox>div::-webkit-scrollbar {
+    display: none;
+}
+
+.containerWrapper {
+    width: 100%;
+}
+
+
+.header {
+    padding: 20px 15px 20px
+}
+
+.header .backButton {
+    font-Size: 24px;
+    color: var(--black);
+    display: inline-block;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.header .subHead {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--black);
+    opacity: 0.8;
+    margin-bottom: 6px
+}
+
+.header .head {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--black);
+    opacity: 0.9;
+}
+
+.customCheckBox input {
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+    cursor: pointer;
+}
+
+.customCheckBox label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.customCheckBox label:after {
+    content: '';
+    cursor: pointer;
+    margin-left: 5px;
+    font-size: 16px;
+    color: var(--blue);
+    width: 16px;
+    height: 16px;
+    border: 1px solid var(--black);
+    display: inline-block;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.customCheckBox input:checked+label:after {
+    content: '\2713';
+    background-color: var(--blue);
+    color: var(--white);
+    border-color: var(--blue);
+}
